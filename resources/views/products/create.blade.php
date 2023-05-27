@@ -16,7 +16,7 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link text-light" href="/">Products</a>
+      <a class="nav-link text-light" href="/">Product</a>
     </li>
     
 
@@ -25,15 +25,26 @@
 <div class="container">
      <div class="row justify-content-center">
          <div class="col-sm-8">
-            <form method="POST">
+          <div class="card mt-3 p-3">
+          <form action="/products/store" method="POST"> 
                @csrf
                  <div class="form-group">
                     <label>Name</label>
-                    <input type= "text" name="name" class="form-control" />
-</div>
-                     
-                 
+                    <input type= "text" name="name" class="form-control"/>
+                                                                   </div>
+        <div class="form-group">
+                    <label>Description</label>
+                    <textarea  name="Description" class="form-control" rows="4"/>  </textarea>
+                                                                    </div>
+        <div class="form-group">
+                    <label>Image</label>
+                    <input type= "file" name="Image" class="form-control"/>
+                                                                   </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+
             </form>
+            
+            </div>
          </div>
      </div>
  </div>
